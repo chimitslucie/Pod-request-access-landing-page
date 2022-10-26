@@ -1,0 +1,291 @@
+/* start basics */
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
+
+:root {
+    --green: #54e6af;
+    --green-active: #b3ffe2;
+    --white: #ffffff;
+    --text: #c2cbe5;
+    --dark: #121725;
+    --logo: #5a668a;
+    --background: #2c344b;
+    --red: #fb3e3e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+html,
+body {
+    font-family: "Chivo", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark);
+}
+/* end basics */
+
+/* start main */
+.logo__page {
+    position: absolute;
+    top: 102px;
+    left: 165px;
+    width: 135px;
+}
+
+.content__img {
+    background-image: url(../img/desktop/image-host.jpg);
+    max-width: 888px;
+    width: 100%;
+    max-height: 640px;
+    height: 100%;
+    position: absolute;
+    top: 130px;
+    right: 0;
+    z-index: 1;
+}
+
+.card {
+    padding: 88px 58px 0 0;
+    position: absolute;
+    z-index: 2;
+    max-width: 723px;
+    width: 100%;
+    background-color: var(--dark);
+    left: 165px;
+    top: 255px;
+}
+
+.card__title {
+    color: var(--green);
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 62px;
+    text-transform: uppercase;
+}
+
+.span__title {
+    color: var(--white);
+}
+
+.card__text {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 300;
+    margin: 24px 0 40px 0;
+    line-height: 28px;
+    max-width: 445px;
+    width: 100%;
+}
+
+.form-group {
+    width: 427px;
+    border-radius: 28px;
+    background-color: var(--background);
+    padding: 5px 5px 5px 32px;
+    height: 56px;
+}
+
+.form-control {
+    background-color: var(--background);
+    border: none;
+    height: 100%;
+    width: 224px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.request__btn {
+    background-color: var(--green);
+    border: none;
+    border-radius: 28px;
+    height: 100%;
+    width: 162px;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.request__btn:hover {
+    background-color: var(--green-active);
+}
+
+.email__error {
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 700;
+    margin: 8px auto auto 32px;
+    display: none;
+}
+
+.card__logo {
+    display: flex;
+    margin-top: 64px;
+}
+
+.logo__spotify {
+    width: 96px;
+}
+
+.logo__apple {
+    width: 78px;
+    margin-left: 40px;
+}
+
+.logo__google {
+    width: 125px;
+    margin-left: 41px;
+}
+
+.logo__pocket {
+    width: 129px;
+    margin-left: 27px;
+}
+
+.dots__img {
+    width: 232px;
+    right: 0;
+    position: absolute;
+    bottom: -182px;
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .logo__page {
+        top: 50px;
+        left: 39px;
+    }
+
+    .content__img {
+        background-image: url(../img/tablet/image-host.jpg);
+        max-width: 491px;
+        max-height: 767px;
+        top: 0px;
+    }
+
+    .card {
+        top: 258px;
+        max-width: 635px;
+        padding: 93px 0 0 0;
+        left: 39px;
+    }
+
+    .card__text {
+        margin: 31px 0 40px 0;
+    }
+
+    .dots__img {
+        left: 30px;
+        bottom: -260px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background: no-repeat url(../img/mobile/image-host.jpg);
+        backdrop-filter: brightness(22%);
+        padding: 0 24px;
+    }
+
+    .logo__page {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 62px;
+    }
+
+    .content__img {
+        display: none;
+    }
+
+    .card {
+        padding: 0;
+        background: transparent;
+        left: 0;
+        top: 175px;
+        text-align: center;
+        max-width: 327px;
+        position: relative;
+    }
+
+    .card__title {
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    .card__text {
+        font-size: 15px;
+        line-height: 25px;
+        margin: 16px auto 33px auto;
+    }
+
+    .card__footer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card__logo {
+        margin-top: 0;
+    }
+
+    .logo__spotify {
+        width: 56px;
+    }
+
+    .logo__apple {
+        width: 45px;
+        margin-left: 23px;
+    }
+
+    .logo__google {
+        width: 73px;
+        margin-left: 25px;
+    }
+
+    .logo__pocket {
+        width: 77px;
+        margin-left: 16px;
+    }
+
+    .form {
+        margin-top: 48px;
+    }
+
+    .form-group {
+        background-color: transparent;
+        padding: 0;
+        width: 100%;
+    }
+
+    .form-control {
+        width: 100%;
+        border-radius: 28px;
+        padding: 9px 0 9px 32px;
+    }
+
+    .request__btn {
+        margin-top: 33px;
+        width: 100%;
+    }
+
+    .email__error {
+        margin:5px auto 15px auto;
+    }
+
+    .dots__img {
+        display: none;
+    }
+}
+/* end main */
